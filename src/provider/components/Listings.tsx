@@ -6,7 +6,9 @@ import { Listing } from './Listing';
 import { ListingsGrid } from './ListingsGrid';
 
 export function Listings() {
-  const listings = useListingsContext();
+  const { listings } = useListingsContext();
+
+  console.log('Listings');
 
   if (!listings?.length) return <LoadingSpinner />;
 

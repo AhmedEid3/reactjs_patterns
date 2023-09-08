@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useListingsContext from '../useListingsContext';
 
-export default function Input() {
-  const listings = useListingsContext();
+function Input() {
+  const { listings } = useListingsContext();
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');
   const toggle = React.useCallback(() => setOpen((state) => !state), []);
+
+  console.log('Input');
 
   return (
     <div className="flyout">
@@ -36,3 +38,5 @@ export default function Input() {
     </div>
   );
 }
+
+export default memo(Input);

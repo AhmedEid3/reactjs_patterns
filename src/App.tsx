@@ -2,7 +2,10 @@ import ListingsHOC from './hoc/listing/Listings';
 import ListingsHook from './hook/presentation/Listings';
 import Input from './provider/components/Input';
 import ListingsProviderPattern from './provider/components/Listings';
+import ThemeView from './provider/components/ThemeView';
+import ToggleThemeBtn from './provider/components/ToggleThemeBtn';
 import { ListingsProvider } from './provider/useListingsContext';
+import { ThemeProvider } from './provider/useThemeContext';
 import { Fahrenheit } from './render-props/Fahrenheit';
 import { Kelvin } from './render-props/Kelvin';
 import TemperatureConverter from './render-props/TemperatureConverter';
@@ -33,8 +36,12 @@ const App = () => {
 
       <h2>Provider Pattern</h2>
       <ListingsProvider>
-        <Input />
-        <ListingsProviderPattern />
+        <ThemeProvider>
+          <ToggleThemeBtn />
+          <ThemeView />
+          <Input />
+          <ListingsProviderPattern />
+        </ThemeProvider>
       </ListingsProvider>
 
       <hr />
