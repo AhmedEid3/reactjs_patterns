@@ -1,4 +1,5 @@
-import Listings from './hoc/listing/Listings';
+import ListingsHOC from './hoc/listing/Listings';
+import ListingsHook from './hook/presentation/Listings';
 import { Fahrenheit } from './render-props/Fahrenheit';
 import { Kelvin } from './render-props/Kelvin';
 import TemperatureConverter from './render-props/TemperatureConverter';
@@ -10,7 +11,7 @@ const App = () => {
       <h1>React Patterns</h1>
 
       <h2>HOC</h2>
-      <Listings />
+      <ListingsHOC />
 
       <hr />
 
@@ -20,6 +21,11 @@ const App = () => {
         RenderKelvin={({ value }) => <p>{value}</p>}
         RenderFahrenheit={({ value }) => <p>{value}</p>}
       />
+
+      <hr />
+
+      <h2>Hook</h2>
+      <ListingsHook />
 
       <hr />
     </main>
