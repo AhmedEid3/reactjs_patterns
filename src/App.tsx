@@ -1,10 +1,13 @@
+import SearchInput from './compound/components/SearchInput';
 import ListingsHOC from './hoc/listing/Listings';
 import ListingsHook from './hook/presentation/Listings';
 import Input from './provider/components/Input';
 import ListingsProviderPattern from './provider/components/Listings';
+import ListingsCompoundPattern from './compound/components/Listings';
 import ThemeView from './provider/components/ThemeView';
 import ToggleThemeBtn from './provider/components/ToggleThemeBtn';
 import { ListingsProvider } from './provider/useListingsContext';
+import { ListingsProvider as ListingsProviderCompound } from './compound/useListingsContext';
 import { ThemeProvider } from './provider/useThemeContext';
 import { Fahrenheit } from './render-props/Fahrenheit';
 import { Kelvin } from './render-props/Kelvin';
@@ -44,6 +47,13 @@ const App = () => {
         </ThemeProvider>
       </ListingsProvider>
 
+      <hr />
+
+      <h2>Compound Pattern</h2>
+      <ListingsProviderCompound>
+        <SearchInput />
+        <ListingsCompoundPattern />
+      </ListingsProviderCompound>
       <hr />
     </main>
   );
