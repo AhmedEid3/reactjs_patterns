@@ -9,7 +9,7 @@ interface IListingsProps {
   };
 }
 
-export function Listings({ data }: IListingsProps) {
+function Listings({ data }: IListingsProps) {
   return (
     <ListingsGrid>
       {data.listings.map((listing) => (

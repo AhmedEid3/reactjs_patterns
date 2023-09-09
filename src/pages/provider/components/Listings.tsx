@@ -1,4 +1,4 @@
-import { LoadingSpinner } from '../../components/LoadingSpinner';
+import { LoadingSpinner } from '../../../components/LoadingSpinner';
 
 import useListingsContext from '../useListingsContext';
 
@@ -8,7 +8,7 @@ import { ListingsGrid } from './ListingsGrid';
 export function Listings() {
   const { listings } = useListingsContext();
 
-  console.log('Listings');
+  console.log('Listings-compund', listings);
 
   if (!listings?.length) return <LoadingSpinner />;
 

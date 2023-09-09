@@ -8,7 +8,7 @@ export default function ListingsContainerComponent() {
   React.useEffect(() => {
     fetch('https://house-lydiahallie.vercel.app/api/listings')
       .then((res) => res.json())
-      .then((res) => setData(res));
+      .then((res) => setData(res.listings));
   }, []);
 
   if (!data) return null;

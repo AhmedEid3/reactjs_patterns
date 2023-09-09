@@ -1,4 +1,4 @@
-import { LoadingSpinner } from '../../components/LoadingSpinner';
+import { LoadingSpinner } from '../../../components/LoadingSpinner';
 import { IListing } from '../container/IListing';
 
 import { Listing } from './Listing';
